@@ -3,11 +3,12 @@ import StarRating from './StarRating'
 import { addToCart } from '../utils/cart'
 import { useApp } from '../context/AppContext'
 import { translations } from '../utils/translations'
+import { getStablePrice } from '../utils/api'
 
 function ProductCard({ game, setCart }) {
   const { lang } = useApp()
   const t = translations[lang].common
-  const price = game.price || (game.metacritic ? (game.metacritic * 0.7).toFixed(2) : (Math.random() * 50 + 19.99).toFixed(2))
+  const price = getStablePrice(game)
   const image = game.background_image || 'https://via.placeholder.com/400x533?text=No+Image'
   const rating = game.rating || 0
   const ratingsCount = game.ratings_count || 0

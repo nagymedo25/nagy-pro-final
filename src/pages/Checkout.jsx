@@ -252,7 +252,7 @@ function Checkout({ cart, setCart }) {
                 {[['city', t.city, 'Cairo'], ['state', t.state, 'EG'], ['postal', t.postal, '11511']].map(([name, label, ph]) => (
                   <div key={name} className="flex flex-col gap-2">
                     <label className="text-[0.6875rem] uppercase tracking-widest font-medium text-on-surface-variant">{label}</label>
-                    <input name={name} required value={form[name]} onChange={handleChange} className="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-all placeholder:text-outline/40 outline-none" placeholder={ph} type={text} />
+                    <input name={name} required value={form[name]} onChange={handleChange} className="bg-transparent border-0 border-b border-outline-variant/30 focus:border-primary focus:ring-0 text-on-surface py-3 px-0 transition-all placeholder:text-outline/40 outline-none" placeholder={ph} type="text" />
                   </div>
                 ))}
               </div>

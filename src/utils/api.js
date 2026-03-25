@@ -27,3 +27,11 @@ export async function getRelatedGames(id) {
 export async function getGenres() {
   return fetchData('/genres')
 }
+
+export function getStablePrice(game) {
+  if (game.price) return game.price.toFixed(2)
+  if (game.metacritic) return (game.metacritic * 0.7).toFixed(2)
+  const seed = typeof game.id === 'string' ? game.id.split('').reduce((a, b) => a + b.charCodeAt(0), 0) : (game.id || 0)
+  const pseudoRandom = (Math.abs(Math.sin(seed) * 10000) % 50) + 19.99
+  return pseudoRandom.toFixed(2)
+}

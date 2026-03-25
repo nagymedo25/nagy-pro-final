@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { getGameById, getRelatedGames } from '../utils/api'
+import { getGameById, getRelatedGames, getStablePrice } from '../utils/api'
 import { addToCart } from '../utils/cart'
 import { useApp } from '../context/AppContext'
 import { translations } from '../utils/translations'
@@ -34,7 +34,7 @@ function ProductDetails({ setCart, cart }) {
 
   if (!game) return <div className="pt-40 text-center min-h-screen">Game not found.</div>
 
-  const price = game.metacritic ? (game.metacritic * 0.7).toFixed(2) : (Math.random() * 50 + 19.99).toFixed(2)
+  const price = getStablePrice(game)
 
   function handleAddToCart() {
     const item = { id: game.id, name: game.name, image: game.background_image, price: parseFloat(price), genre: game.genres?.[0]?.name || 'Game', quantity: qty }
