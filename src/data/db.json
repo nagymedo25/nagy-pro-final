@@ -1,0 +1,148 @@
+{
+  "games": [
+    {
+      "id": 1,
+      "name": "Elden Ring",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/library_600x900_2x.jpg",
+      "rating": 4.7,
+      "ratings_count": 5200,
+      "metacritic": 96,
+      "released": "2022-02-25",
+      "genres": [
+        { "id": 4, "name": "Action" },
+        { "id": 5, "name": "RPG" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/ss_96397444c6883f3e6933fe57259a0f670605963a.1920x1080.jpg" },
+        { "id": 1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/ss_8443990664f89be983e20a40237dfb8f2dd7b793.1920x1080.jpg" }
+      ],
+      "description": "<p>Elden Ring is an action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment. The game was directed by Hidetaka Miyazaki and made in collaboration with the fantasy novelist George R. R. Martin, who provided material for the game's setting.</p>"
+    },
+    {
+      "id": 2,
+      "name": "The Witcher 3: Wild Hunt",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/library_600x900_2x.jpg",
+      "rating": 4.67,
+      "ratings_count": 6400,
+      "metacritic": 92,
+      "released": "2015-05-18",
+      "genres": [
+        { "id": 4, "name": "Action" },
+        { "id": 5, "name": "RPG" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_f8df3e6593a110034a742b6c93437299a4192d6e.1920x1080.jpg" },
+        { "id": 3, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/ss_69996d96a7ee7f80db452174c8b652875f60b83e.1920x1080.jpg" }
+      ],
+      "description": "<p>The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt. It is the sequel to the 2011 game The Witcher 2: Assassins of Kings and the third main installment in the The Witcher video game series, played in an open world with a third-person perspective.</p>"
+    },
+    {
+      "id": 3,
+      "name": "Grand Theft Auto V",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/library_600x900_2x.jpg",
+      "rating": 4.47,
+      "ratings_count": 6500,
+      "metacritic": 91,
+      "released": "2013-09-17",
+      "genres": [
+        { "id": 4, "name": "Action" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/ss_495d985289945bf13f64c153835f8e5c2d3cf83c.1920x1080.jpg" },
+        { "id": 4, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/ss_752a514b8a2e1d752f95b54659b819f798836528.1920x1080.jpg" }
+      ],
+      "description": "<p>Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV.</p>"
+    },
+    {
+      "id": 4,
+      "name": "The Last of Us Part I",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/library_600x900_2x.jpg",
+      "rating": 4.5,
+      "ratings_count": 4800,
+      "metacritic": 93,
+      "released": "2020-06-19",
+      "genres": [
+        { "id": 4, "name": "Action" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1888110/ss_5a198be1675765691079366df04bf604d5505e60.1920x1080.jpg" }
+      ],
+      "description": "<p>Five years after their perilous journey across the post-pandemic United States, Ellie and Joel have settled down in Jackson, Wyoming.</p>"
+    },
+    {
+      "id": 5,
+      "name": "Red Dead Redemption 2",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/library_600x900_2x.jpg",
+      "rating": 4.59,
+      "ratings_count": 4500,
+      "metacritic": 97,
+      "released": "2018-10-26",
+      "genres": [
+        { "id": 4, "name": "Action" },
+        { "id": 3, "name": "Adventure" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/ss_b831fa81622b72458022a0134703a958e469aa8e.1920x1080.jpg" }
+      ],
+      "description": "<p>Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents and the best bounty hunters in the nation massing on their heels, the gang must rob, steal and fight their way across the rugged heartland of America in order to survive.</p>"
+    },
+    {
+      "id": 6,
+      "name": "God of War",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/library_600x900_2x.jpg",
+      "rating": 4.59,
+      "ratings_count": 5500,
+      "metacritic": 94,
+      "released": "2018-04-20",
+      "genres": [
+        { "id": 4, "name": "Action" },
+        { "id": 3, "name": "Adventure" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1593500/ss_891e44a958a74e1d5360980e1b65f7c35fa92758.1920x1080.jpg" }
+      ],
+      "description": "<p>Living as a man outside the shadow of the gods, Kratos must adapt to unfamiliar lands, unexpected threats, and a second chance at being a father.</p>"
+    },
+    {
+      "id": 7,
+      "name": "Cyberpunk 2077",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900_2x.jpg",
+      "rating": 4.14,
+      "ratings_count": 3200,
+      "metacritic": 86,
+      "released": "2020-12-10",
+      "genres": [
+        { "id": 5, "name": "RPG" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1091500/ss_f83063533be5384cd33919e83fab923ec5708819.1920x1080.jpg" }
+      ],
+      "description": "<p>Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification.</p>"
+    },
+    {
+      "id": 8,
+      "name": "Ghost of Tsushima",
+      "background_image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2215430/library_600x900_2x.jpg",
+      "rating": 4.67,
+      "ratings_count": 3900,
+      "metacritic": 83,
+      "released": "2020-07-17",
+      "genres": [
+        { "id": 4, "name": "Action" },
+        { "id": 3, "name": "Adventure" }
+      ],
+      "short_screenshots": [
+        { "id": -1, "image": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2215430/ss_49380f2d488950ef125b2938171d9a2123548983.1920x1080.jpg" }
+      ],
+      "description": "<p>In the late 13th century, the Mongol empire has laid waste to entire nations along their campaign to conquer the East. Tsushima Island is all that stands between mainland Japan and a massive Mongol invasion fleet led by the ruthless and cunning general, Khotun Khan.</p>"
+    }
+  ],
+  "genres": [
+    { "id": 4, "name": "Action", "slug": "action", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1245620/header.jpg" },
+    { "id": 5, "name": "RPG", "slug": "role-playing-games-rpg", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/292030/header.jpg" },
+    { "id": 3, "name": "Adventure", "slug": "adventure", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1174180/header.jpg" },
+    { "id": 2, "name": "Shooter", "slug": "shooter", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/271590/header.jpg" },
+    { "id": 7, "name": "Puzzle", "slug": "puzzle", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/110800/header.jpg" },
+    { "id": 10, "name": "Racing", "slug": "racing", "image_background": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1551360/header.jpg" }
+  ]
+}

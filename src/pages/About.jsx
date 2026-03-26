@@ -17,7 +17,7 @@ function About() {
         />
         <div className="absolute inset-0 z-20 flex flex-col justify-center items-center px-8 text-center">
           <span className="uppercase tracking-[0.2em] text-secondary mb-4 font-bold text-sm">{t.badge}</span>
-          <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-on-surface mb-6 max-w-4xl">{t.title}</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black tracking-tighter text-on-surface mb-6 max-w-4xl">{t.title}</h1>
           <p className="text-xl text-on-surface-variant max-w-2xl font-light">{t.desc}</p>
         </div>
       </section>

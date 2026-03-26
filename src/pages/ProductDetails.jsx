@@ -62,7 +62,7 @@ function ProductDetails({ setCart, cart }) {
             <div className="flex gap-2">
               {game.genres?.map(g => <span key={g.id} className="text-[0.625rem] font-bold uppercase tracking-widest text-primary bg-primary/10 px-2 py-1 rounded">{g.name}</span>)}
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tighter text-on-surface">{game.name}</h1>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-on-surface">{game.name}</h1>
             <StarRating rating={game.rating} count={game.ratings_count} />
           </div>
 

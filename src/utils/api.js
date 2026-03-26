@@ -1,31 +1,70 @@
-const API_KEY = import.meta.env.VITE_RAWG_API_KEY
-const BASE_URL = 'https://api.rawg.io/api'
+import db from '../data/db.json'
 
-async function fetchData(endpoint, params = {}) {
-  const searchParams = new URLSearchParams({ key: API_KEY, ...params })
-  const url = `${BASE_URL}${endpoint}?${searchParams.toString()}`
-  const response = await fetch(url)
-  if (!response.ok) throw new Error('Network response was not ok')
-  return response.json()
-}
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
 
 export async function getGames({ search = '', page = 1, genre = '', ordering = '-rating', pageSize = 12 } = {}) {
-  const params = { page, page_size: pageSize, ordering }
-  if (search) params.search = search
-  if (genre) params.genres = genre
-  return fetchData('/games', params)
+  await delay(300)
+  let results = [...db.games]
+
+  if (search) {
+    const query = search.toLowerCase()
+    results = results.filter(game => game.name.toLowerCase().includes(query))
+  }
+
+  if (genre) {
+    const genreObj = db.genres.find(g => 
+      g.id === parseInt(genre) || 
+      g.slug === genre || 
+      g.name.toLowerCase() === genre.toLowerCase()
+    )
+    if (genreObj) {
+      results = results.filter(game => game.genres.some(g => g.id === genreObj.id))
+    } else {
+      results = []
+    }
+  }
+
+  if (ordering === '-rating') {
+    results.sort((a, b) => b.rating - a.rating)
+  } else if (ordering === 'rating') {
+    results.sort((a, b) => a.rating - b.rating)
+  } else if (ordering === '-released') {
+    results.sort((a, b) => new Date(b.released) - new Date(a.released))
+  } else if (ordering === 'name') {
+    results.sort((a, b) => a.name.localeCompare(b.name))
+  } else if (ordering === '-metacritic') {
+    results.sort((a, b) => (b.metacritic || 0) - (a.metacritic || 0))
+  }
+
+  const start = (page - 1) * pageSize
+  const paginatedResults = results.slice(start, start + pageSize)
+
+  return {
+    count: results.length,
+    results: paginatedResults
+  }
 }
 
 export async function getGameById(id) {
-  return fetchData(`/games/${id}`)
+  await delay(300)
+  const game = db.games.find(g => g.id === parseInt(id))
+  return game || null
 }
 
 export async function getRelatedGames(id) {
-  return fetchData(`/games/${id}/game-series`)
+  await delay(300)
+  const game = db.games.find(g => g.id === parseInt(id))
+  if (!game) return { results: [] }
+  
+  const genreIds = game.genres.map(g => g.id)
+  const related = db.games.filter(g => g.id !== game.id && g.genres.some(gen => genreIds.includes(gen.id)))
+  
+  return { results: related }
 }
 
 export async function getGenres() {
-  return fetchData('/genres')
+  await delay(300)
+  return { results: db.genres }
 }
 
 export function getStablePrice(game) {
@@ -35,3 +74,4 @@ export function getStablePrice(game) {
   const pseudoRandom = (Math.abs(Math.sin(seed) * 10000) % 50) + 19.99
   return pseudoRandom.toFixed(2)
 }
+

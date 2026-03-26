@@ -12,7 +12,7 @@ const featuredProducts = [
 
 function Countdown({ t }) {
   return (
-    <div className="glass-panel p-8 rounded-2xl border border-outline-variant/10">
+    <div className="glass-panel p-4 md:p-8 rounded-2xl border border-outline-variant/10">
       <div className="flex flex-col items-center">
         <span className="text-6xl font-black tracking-tighter text-on-surface">50%</span>
         <span className="text-on-surface-variant text-xs font-bold tracking-[0.3em] mt-2 uppercase">OFF ALL ACCESSORIES</span>
@@ -44,23 +44,23 @@ function Home({ setCart }) {
 
   return (
     <main className="pt-20">
-      <section className="relative h-[870px] w-full overflow-hidden">
+      <section className="relative min-h-[600px] h-screen max-h-[870px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFmsQtkBSWYkaim8QgowjOiO0dkfDqNYVK_KuUUEi_6JOLx4DKw6jK2Ggo-W3obbsFobCKu9HE3fvhlRYlGkO_PcE6oQzcBhzWzkOIMd_RAYpHidj_GSFg6MMO33JWkbzxXZOvoutzAXb-MSvYQssmSSKpLpAoTgOIe6EbfjvShRGguT57h1Uz5QOK-rC0NOgI5nL-XUhPWFBWVQZy7izj6u1eWXjpzAhBOOX7HdktsTObePWEdKvm58ajym2jUOrkp2ELiJyxl8D" alt="Gaming setup" />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
         </div>
-        <div className="relative h-full max-w-[1440px] mx-auto px-8 flex flex-col justify-center items-start">
-          <div className="max-w-2xl space-y-6">
-            <span className="bg-secondary-container/20 text-secondary px-4 py-1.5 rounded-lg text-[0.6875rem] uppercase tracking-[0.2em] font-bold border border-secondary/10">{t.badge}</span>
-            <h1 className="text-[3.5rem] font-semibold leading-[1.1] tracking-tighter text-on-surface">
+        <div className="relative h-full max-w-[1440px] mx-auto px-6 md:px-8 flex flex-col justify-center items-start">
+          <div className="max-w-2xl space-y-4 md:space-y-6">
+            <span className="bg-secondary-container/20 text-secondary px-4 py-1.5 rounded-lg text-[0.625rem] md:text-[0.6875rem] uppercase tracking-[0.2em] font-bold border border-secondary/10">{t.badge}</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold leading-[1.05] tracking-tighter text-on-surface">
               {t.heroTitle1} <br />
               <span className="bg-gradient-to-r from-primary to-primary-container bg-clip-text text-transparent">{t.heroTitle2}</span>
             </h1>
-            <p className="text-lg text-on-surface-variant/80 max-w-lg leading-relaxed">{t.heroDesc}</p>
-            <div className="flex gap-4 pt-4">
-              <Link to="/products" className="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-10 py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all">{t.shopNow}</Link>
-              <Link to="/about" className="border border-outline-variant/20 px-10 py-4 rounded-lg font-bold tracking-tight hover:bg-surface-container-highest transition-all text-on-surface">{t.viewSpecs}</Link>
+            <p className="text-base md:text-lg text-on-surface-variant/80 max-w-lg leading-relaxed">{t.heroDesc}</p>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Link to="/products" className="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold tracking-tight hover:brightness-110 active:scale-[0.98] transition-all text-center flex-1 sm:flex-none">{t.shopNow}</Link>
+              <Link to="/about" className="border border-outline-variant/20 px-8 md:px-10 py-3 md:py-4 rounded-lg font-bold tracking-tight hover:bg-surface-container-highest transition-all text-on-surface text-center flex-1 sm:flex-none">{t.viewSpecs}</Link>
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ function Home({ setCart }) {
 
       <section className="max-w-[1440px] mx-auto px-8 mt-32">
         <h2 className="text-[1.75rem] font-semibold tracking-tight uppercase mb-12 text-on-surface">{t.ecosystem}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-2 gap-4 h-[600px]">
+        <div className="grid grid-cols-1 md:grid-cols-6 grid-rows-none md:grid-rows-2 gap-4 h-auto md:h-[600px]">
           <div className="md:col-span-3 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container">
             <img className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMBdDAEyyix0jDO_wRZw07eIWQOShNR1pS9q4Q2Dtw3JvuohRCb4MsEFgv3Sjd02NB1ahgbukBnWEEHzIKq-3YWvhmmVJZYnRMMT3nNiOK5vbFZRyMJ7lWO1g1oZz1v6hARUjk6kF5MgoYsZNDuQJ4Kg2oWuygsYckiy3dIWsFuMF-dT9AX-VDi_IwlT8MG87qI5xQOqTzx5uemU10OxkLlPWB1dz70eXCVe3mAe2w58umsJW1gvbGpumonDQWINmLlxMfWpMmwDG9" alt="Hardware" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#131317] to-transparent"></div>
@@ -132,7 +132,7 @@ function Home({ setCart }) {
       <section className="max-w-[1440px] mx-auto px-8 mt-32 mb-12">
         <div className="relative w-full rounded-2xl overflow-hidden bg-surface-container-low shadow-[0_40px_80px_rgba(103,0,181,0.1)]">
           <div className="absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top_right,rgba(164,230,255,0.15),transparent_50%)]"></div>
-          <div className="flex flex-col md:flex-row items-center justify-between p-12 md:p-20 relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between p-6 md:p-20 relative z-10">
             <div className="space-y-6 text-center md:text-start">
               <span className="text-secondary font-black tracking-[0.4em] text-[0.6875rem]">{t.limitedEvent}</span>
               <h2 className="text-[3rem] font-black tracking-tighter leading-tight italic text-on-surface">{t.summerSale}</h2>
